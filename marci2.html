@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marci Metzger Homes – Pahrump Realtor | The Ridge Realty Group</title>
+<meta name="description" content="Marci Metzger Homes – Pahrump, NV. Realtor for nearly 3 decades. Licensed Broker in Seattle, now serving Southern Nevada as Pahrump's top real estate agent.">
+<meta property="og:title" content="Marci Metzger Homes">
+<meta property="og:image" content="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/mtn%20falls%20pond.jpg">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#13222c; --sky:#1f4e6b; --amber:#e2a33b; --stone:#eef1ef; --muted:#58666d;
+  --serif:"Fraunces",Georgia,serif;
+  --bs-body-font-family:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --bs-body-color:#1b262d;
+  --bs-link-color-rgb:31,78,107;
+}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-size:1.0625rem;line-height:1.65}
+h1,h2,h3,.brand,.phone{font-family:var(--serif);font-weight:700;line-height:1.12;letter-spacing:-.01em}
+section{padding:clamp(56px,9vw,112px) 0}
+.btn-amber{--bs-btn-bg:var(--amber);--bs-btn-border-color:var(--amber);--bs-btn-color:var(--night);--bs-btn-hover-bg:#f0b64f;--bs-btn-hover-border-color:#f0b64f;--bs-btn-hover-color:var(--night);--bs-btn-active-bg:#f0b64f;--bs-btn-active-color:var(--night);font-weight:600}
+.btn-night{--bs-btn-bg:var(--night);--bs-btn-border-color:var(--night);--bs-btn-color:#fff;--bs-btn-hover-bg:var(--sky);--bs-btn-hover-border-color:var(--sky);--bs-btn-hover-color:#fff;--bs-btn-active-bg:var(--sky);font-weight:600}
+.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding-inline:1.75rem}
+:focus-visible{outline:3px solid var(--amber)!important;outline-offset:3px}
+
+/* navbar */
+.navbar{transition:background .25s;padding:0}
+.navbar.solid,.navbar.menu{background:rgba(19,34,44,.97)}
+.navbar-brand{color:#fff!important;font-size:1.25rem;padding:1rem 0}
+.navbar .nav-link{color:#e8eef0;font-weight:500;font-size:.95rem;border-radius:999px;padding:.5rem .9rem!important}
+.navbar .nav-link:hover,.navbar .nav-link.active{background:rgba(255,255,255,.14);color:#fff}
+.navbar-toggler{border-color:rgba(255,255,255,.4)}
+.navbar-toggler-icon{filter:invert(1)}
+@media(max-width:991.98px){.navbar-collapse{padding-bottom:1rem}.navbar .nav-link{padding:.85rem .5rem!important;border-radius:8px}}
+
+/* hero */
+.hero{position:relative;min-height:min(92vh,760px);display:flex;align-items:flex-end;color:#fff;padding:130px 0 90px;background:var(--night) url("https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/mtn%20falls%20pond.jpg") center/cover no-repeat}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(19,34,44,.55),rgba(19,34,44,.25) 40%,rgba(19,34,44,.85))}
+.hero .container{position:relative}
+.hero small{display:block;font-weight:600;color:var(--amber);margin-bottom:.9rem}
+.hero h1{font-size:clamp(46px,9vw,108px);max-width:11ch;margin-bottom:1.75rem}
+
+/* search */
+.find{padding:clamp(56px,8vw,88px) 0 clamp(56px,8vw,96px);background-color:#b8bab4;background-image:linear-gradient(to bottom,rgba(19,34,44,.5),rgba(19,34,44,.2) 45%,#b8bab400 70%,#b8bab4),url("images/search-bg.jpg");background-repeat:no-repeat;background-position:top center;background-size:100% auto,max(100%,1100px) auto}
+.find-title{color:#fff;font-size:clamp(30px,5vw,52px);margin-bottom:clamp(36px,6vw,64px);text-shadow:0 2px 18px rgba(0,0,0,.45)}
+.search{max-width:1040px;margin-inline:auto}
+.search-h{font-family:var(--serif);font-size:clamp(22px,3vw,30px);color:var(--sky)}
+.search{background:#fff;border-radius:1.15rem;box-shadow:0 24px 60px rgba(19,34,44,.22);padding:clamp(22px,3.5vw,36px)}
+.search h2{font-size:clamp(24px,3.5vw,32px)}
+.form-label{font-size:.875rem;font-weight:600;color:var(--muted);margin-bottom:.3rem}
+.form-control,.form-select{min-height:46px;border-radius:.65rem}
+
+/* agent */
+.portrait{position:relative;max-width:380px}
+.portrait img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:1.5rem;background:#c9d4d1}
+.portrait::after{content:"";position:absolute;inset:18px -18px -18px 18px;border:2px solid var(--amber);border-radius:1.5rem;z-index:-1}
+.agent h2{font-size:clamp(34px,5vw,56px)}
+.kicker{font-weight:600;font-size:1.125rem;color:var(--sky)}
+.phone{font-size:clamp(26px,4vw,36px);text-decoration:none;color:var(--night)}
+.phone:hover{color:var(--sky)}
+
+/* sold */
+.sold{background:var(--night);color:#fff}
+.sold h2{font-size:clamp(40px,6.5vw,76px)}
+.sold .lead-sub{font-size:1.25rem;font-weight:500;color:var(--amber)}
+.sold p{color:#cdd8dc}
+.stat{border-left:3px solid var(--amber);padding-left:1rem}
+.stat b{display:block;font:700 clamp(32px,5vw,48px) var(--serif)}
+.stat span{color:#b9c6cc;font-size:.95rem}
+.point{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:1rem;padding:1.5rem}
+.point h3{font-size:1.4rem}
+
+/* services */
+.services{background:var(--stone)}
+.services h2,.gallery-sec h2,.contact h2{font-size:clamp(32px,5vw,52px)}
+.svc-img{width:100%;max-width:316px;aspect-ratio:1;object-fit:cover;margin:0 auto 1.5rem;border-radius:.5rem;background:#c9d4d1}
+.svc-img.round{border-radius:50%}
+.svc h3{font-size:1.4rem;margin-bottom:.9rem}
+.svc p{color:var(--muted);max-width:36ch;margin-inline:auto}
+
+/* carousel */
+#galleryCarousel{border-radius:1.25rem;overflow:hidden;background:var(--night);box-shadow:0 18px 50px rgba(19,34,44,.2)}
+#galleryCarousel img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center 30%}
+#galleryCarousel .carousel-indicators{margin-bottom:.75rem}
+#galleryCarousel .carousel-indicators [data-bs-target]{width:10px;height:10px;border-radius:50%;border:0;margin:0 5px}
+@media(max-width:575.98px){#galleryCarousel img{aspect-ratio:4/3}}
+
+/* contact */
+ .partners{background:var(--stone);padding:clamp(44px,6vw,72px) 0}
+.partners h2{font-size:clamp(28px,4vw,40px)}
+.partners img{width:100%;max-width:140px;height:auto;margin:0 auto;transition:transform .2s}
+.partners a:hover img{transform:scale(1.06)}
+.contact{background:var(--night);color:#fff}
+.contact h3{font:600 1.25rem var(--bs-body-font-family)}
+.contact address{color:#cdd8dc}
+.contact a:not(.btn){color:#cdd8dc}
+.contact .form-control{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.25);color:#fff;min-height:50px}
+.contact .form-control::placeholder{color:#9fb0b8}
+.contact .form-control:focus{background:rgba(255,255,255,.12);color:#fff;border-color:var(--amber);box-shadow:none}
+.fine{font-size:.8125rem;color:#9fb0b8}
+.hours b{color:var(--amber)}
+.social-icons a{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;color:#fff;font-size:1.6rem;text-decoration:none;transition:background .2s,color .2s}
+.social-icons a:hover{background:#fff;color:var(--night)}
+#sent{color:var(--amber);font-weight:600}
+.map-sec{position:relative;padding:0;background:#e5e3df}
+.map-sec iframe{display:block;width:100%;height:clamp(320px,45vw,480px);border:0}
+.map-btn{position:absolute;top:14px;left:14px;display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:0 1.1rem;border-radius:999px;background:#fff;color:var(--night);font-weight:600;font-size:.85rem;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+.map-btn:hover{background:var(--amber);color:var(--night)}
+footer{background:#0d1a22;color:#9fb0b8;font-size:.875rem;padding:1.4rem 0;text-align:center}
+
+#cookie{position:fixed;left:12px;right:12px;bottom:12px;max-width:640px;margin-inline:auto;z-index:1080;border-radius:.9rem;box-shadow:0 12px 40px rgba(0,0,0,.25);font-size:.875rem}
+#cookie[hidden]{display:none!important}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top" id="hdr" aria-label="Main">
+  <div class="container">
+    <a class="navbar-brand brand" href="#top">Marci Metzger</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse justify-content-end" id="nav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#top">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#listings">Listings</a></li>
+        <li class="nav-item"><a class="nav-link" href="#lets-move">Let's Move</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div class="container">
+      <small>Marci Metzger – The Ridge Realty Group</small>
+      <h1>Pahrump Realtor</h1>
+      <div class="d-flex flex-wrap gap-3 align-items-center">
+        <a class="btn btn-amber" href="tel:+12069196886">Call Now</a>
+        <a class="link-light fw-medium" href="#listings">Find your dream home</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="find" id="listings">
+   <div class="container">
+    <h2 class="find-title text-center">Find Your Dream Home</h2>
+    <form class="search" id="searchForm">
+      <h3 class="search-h mb-3">Search Listings</h3>
+      <div class="row g-3">
+        <div class="col-12 col-sm-6 col-lg-3"><label class="form-label" for="loc">Location</label><input class="form-control" id="loc" name="location" placeholder="City or ZIP"></div>
+        <div class="col-12 col-sm-6 col-lg-3"><label class="form-label" for="type">Type</label>
+          <select class="form-select" id="type" name="type"><option>Any</option><option>House</option><option>Condo</option><option>Land</option><option>Commercial</option></select></div>
+        <div class="col-12 col-sm-6 col-lg-3"><label class="form-label" for="sort">Sort By</label>
+          <select class="form-select" id="sort" name="sort"><option>Newest</option><option>Oldest</option><option>Least Expensive to Most</option><option>Most Expensive to Least</option><option>Bedrooms (Low to High)</option><option>Bedrooms (High to Low)</option><option>Bathrooms (Low to High)</option><option>Bathrooms (High to Low)</option></select></div>
+        <div class="col-12 col-sm-6 col-lg-3"><label class="form-label" for="beds">Bedrooms</label>
+          <select class="form-select" id="beds" name="beds"><option>Any Number</option><option>Studio</option><option>1+</option><option>2+</option><option>3+</option><option>4+</option><option>5+</option><option>6+</option></select></div>
+        <div class="col-12 col-sm-6 col-lg-3"><label class="form-label" for="baths">Baths</label>
+          <select class="form-select" id="baths" name="baths"><option>Any Number</option><option>1+</option><option>2+</option><option>3+</option><option>4+</option><option>5+</option><option>6+</option></select></div>
+        <div class="col-6 col-lg-3"><label class="form-label" for="min">Min Price</label><input class="form-control" type="number" min="0" step="1000" id="min" name="min" placeholder="$ Min"></div>
+        <div class="col-6 col-lg-3"><label class="form-label" for="max">Max Price</label><input class="form-control" type="number" min="0" step="1000" id="max" name="max" placeholder="$ Max"></div>
+        <div class="col-12 col-lg-3 d-grid align-items-end"><button class="btn btn-night" type="submit">Search Now</button></div>
+      </div>
+      <p id="searchMsg" class="mt-3 mb-0 fw-semibold text-primary" role="status"></p>
+    </form>
+   </div>
+  </section>
+
+  <section id="about-us">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-md-5 col-lg-4">
+          <div class="portrait mx-auto mx-md-0">
+            <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/photo-5db79f9.jpg" alt="Marci Metzger, Realtor" width="640" height="640" loading="lazy">
+          </div>
+        </div>
+        <div class="col-md-7 col-lg-8 agent">
+          <h2 class="mb-2">Marci Metzger</h2>
+          <p class="kicker mb-3">Realtor for nearly 3 decades</p>
+          <p class="text-secondary mb-4" style="max-width:56ch">Over two decades in real estate. A licensed broker in Seattle, now serving Southern Nevada as Pahrump's top real estate agent with The Ridge Realty Group.</p>
+          <a class="phone" href="tel:+12069196886">206-919-6886</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sold" id="lets-move">
+    <div class="container">
+      <div class="row g-5 align-items-start">
+        <div class="col-lg-6">
+          <h2 class="mb-2">Get It Sold</h2>
+          <p class="lead-sub mb-3">Top Residential Sales Last 5 Years</p>
+          <p style="max-width:58ch">We helped nearly 90 clients in 2021, and closed 28.5 million in sales! Our team works hard everyday to grow and learn, so that we may continue to excel in our market. Our clients deserve our best, &amp; we want to make sure our best is better every year.</p>
+          <div class="d-flex flex-wrap gap-4 mt-4">
+            <div class="stat"><b>~90</b><span>clients helped in 2021</span></div>
+            <div class="stat"><b>$28.5M</b><span>in sales closed</span></div>
+          </div>
+        </div>
+        <div class="col-lg-6 d-grid gap-3">
+          <div class="point"><h3 class="mb-2">Don't Just List it...</h3><p class="mb-0">Get it SOLD! We exhaust every avenue to ensure our listings are at the fingertips of every possible buyer, getting you top dollar for your home.</p></div>
+          <div class="point"><h3 class="mb-2">Guide to Buyers</h3><p class="mb-0">Nobody knows the market like we do. Enjoy having a pro at your service. Market analysis, upgrades lists, contractors on speed dial, &amp; more!</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <h2 class="text-center mb-5">Our Services</h2>
+      <div class="row g-5 justify-content-center text-center">
+        <div class="col-md-6 col-lg-4">
+          <article class="svc">
+            <img class="svc-img" src="images/service-1.jpg" alt="White pallet coffee table with a plant, books and flowers" width="316" height="316" loading="lazy">
+            <h3>Real Estate Done Right</h3>
+            <p>Nervous about your property adventure? Don’t be. Whether you're getting ready to buy or sell your residence, looking at investment properties, or just curious about the markets, our team ensures you get the best experience possible!</p>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="svc">
+            <img class="svc-img" src="images/service-2.jpg" alt="Modern home with a lawn, pool and mountain view" width="316" height="316" loading="lazy">
+            <h3>Commercial &amp; Residential</h3>
+            <p>Large or small, condo or mansion, we can find it and get at the price that's right. Fixer-uppers? Luxury? We can help with all of it! We live, work, and play in this community. Happy to help you find where to put your hard-earned dollars.</p>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="svc">
+            <img class="svc-img round" src="images/service-3.jpg" alt="Two people shaking hands over a laptop while a client smiles" width="316" height="316" loading="lazy">
+            <h3>Rely on Expertise</h3>
+            <p>If you have questions about affordability, credit, and loan options, trust us to connect you with the right people to get the answers you need in a timely fashion. We make sure you feel confident and educated every step of the way.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-sec" id="gallery">
+    <div class="container">
+      <h2 class="mb-4">Photo Gallery</h2>
+      <!-- Slides are built from the PHOTOS array in the script (max 7). -->
+      <div id="galleryCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="hover" aria-label="Photo gallery">
+        <div class="carousel-indicators" id="galInd"></div>
+        <div class="carousel-inner" id="galInner"></div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="partners" id="partners" aria-labelledby="partnersTitle">
+    <div class="container">
+      <h2 id="partnersTitle" class="text-center mb-5">Our Partners</h2>
+      <ul class="row row-cols-2 row-cols-lg-4 g-4 list-unstyled align-items-center text-center mb-0">
+        <li class="col"><a href="#" aria-label="The Ridge Realty Group"><img src="images/partners/partner-1.svg" alt="The Ridge Realty Group" width="140" height="140" loading="lazy"></a></li>
+        <li class="col"><a href="https://www.hud.gov/fairhousing" target="_blank" rel="noopener" aria-label="Equal Housing Opportunity"><img src="images/partners/partner-2.svg" alt="Equal Housing Opportunity" width="140" height="140" loading="lazy"></a></li>
+        <li class="col"><a href="https://www.nar.realtor/" target="_blank" rel="noopener" aria-label="REALTOR"><img src="images/partners/partner-3.svg" alt="REALTOR" width="140" height="140" loading="lazy"></a></li>
+        <li class="col"><a href="#" aria-label="Pahrump Valley Chamber of Commerce"><img src="images/partners/partner-4.svg" alt="Pahrump Valley Chamber of Commerce" width="140" height="140" loading="lazy"></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-6">
+          <h2 class="mb-4">Call or Visit</h2>
+          <h3 class="mb-1">Marci Metzger – The Ridge Realty Group</h3>
+          <address class="mb-3">3190 HW-160, Suite F<br>Pahrump, Nevada 89048, United States<br><a href="tel:+12069196886">(206) 919-6886</a></address>
+          <h3 class="mb-1">Office Hours</h3>
+          <p class="hours mb-1">Open daily <b class="ms-2">8:00 am – 7:00 pm</b></p>
+          <p class="fine">Appointments outside office hours available upon request. Just call!</p>
+          <a class="btn btn-amber mb-4" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=3190+HW-160+Suite+F+Pahrump+Nevada+89048">Get directions</a>
+          <ul class="social-icons list-unstyled d-flex gap-2 mb-0">
+            <li><a href="https://www.facebook.com/MarciHomes/" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.instagram.com/marcimetzger_theridge/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/marci-metzger-30642496/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.yelp.com/biz/xr3yQN_m2SgO0R_7S6p62w" target="_blank" rel="noopener" aria-label="Yelp"><i class="bi bi-yelp" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <h2 class="mb-4">Send Message</h2>
+          <form id="contactForm" class="d-grid gap-3">
+            <input class="form-control" type="text" name="name" placeholder="Name" aria-label="Name" autocomplete="name">
+            <input class="form-control" type="email" name="email" placeholder="Email*" aria-label="Email" required autocomplete="email">
+            <button class="btn btn-amber" type="submit">Send</button>
+            <p id="sent" class="mb-0" role="status"></p>
+            <p class="fine mb-0">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<section class="map-sec" aria-label="Office location map">
+  <iframe title="Map of Marci Metzger – The Ridge Realty Group, 3190 HW-160, Suite F, Pahrump, Nevada" src="https://www.google.com/maps?q=3190+HW-160+Suite+F,+Pahrump,+Nevada+89048&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+  <a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=3190+HW-160+Suite+F+Pahrump+Nevada+89048"><i class="bi bi-cursor-fill" aria-hidden="true"></i> Get directions</a>
+</section>
+
+<footer><div class="container"><div class="d-flex justify-content-center mb-3"><ul class="social-icons list-unstyled d-flex gap-2 mb-0 footer-icons">
+            <li><a href="https://www.facebook.com/MarciHomes/" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.instagram.com/marcimetzger_theridge/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/marci-metzger-30642496/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.yelp.com/biz/xr3yQN_m2SgO0R_7S6p62w" target="_blank" rel="noopener" aria-label="Yelp"><i class="bi bi-yelp" aria-hidden="true"></i></a></li>
+          </ul></div>Copyright © <span id="yr">2026</span> Marci Metzger – All Rights Reserved</div></footer>
+
+<div id="cookie" class="alert alert-light d-flex flex-column flex-sm-row gap-3 align-items-sm-center justify-content-between mb-0" hidden role="dialog" aria-label="Cookie notice">
+  <span><strong>This website uses cookies.</strong> We use cookies to analyze website traffic and optimize your website experience. By accepting our use of cookies, your data will be aggregated with all other user data.</span>
+  <button class="btn btn-night flex-shrink-0" id="accept" style="min-height:40px">Accept</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+/* ===== Gallery: add up to 7 images here. Extra entries are ignored. ===== */
+const PHOTOS=[
+  {src:'https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/mtn%20falls%20pond.jpg',alt:'Mountain falls and pond'},
+  {src:'https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/photo-5db79f9.jpg',alt:'Marci Metzger, Realtor'}
+  // {src:'images/home-3.jpg',alt:'Describe photo 3'},
+  // {src:'images/home-4.jpg',alt:'Describe photo 4'},
+  // ...up to 7
+].slice(0,7);
+
+const inner=document.getElementById('galInner'),ind=document.getElementById('galInd'),car=document.getElementById('galleryCarousel');
+PHOTOS.forEach((p,i)=>{
+  const item=document.createElement('div');
+  item.className='carousel-item'+(i===0?' active':'');
+  const img=document.createElement('img');
+  img.src=p.src;img.alt=p.alt;if(i>0)img.loading='lazy';
+  item.appendChild(img);inner.appendChild(item);
+  const b=document.createElement('button');
+  b.type='button';b.setAttribute('data-bs-target','#galleryCarousel');b.setAttribute('data-bs-slide-to',i);
+  b.setAttribute('aria-label','Slide '+(i+1));if(i===0){b.className='active';b.setAttribute('aria-current','true')}
+  ind.appendChild(b);
+});
+if(PHOTOS.length<2){car.querySelectorAll('.carousel-control-prev,.carousel-control-next,.carousel-indicators').forEach(e=>e.remove())}
+new bootstrap.Carousel(car,{interval:4000,ride:'carousel',pause:'hover',wrap:true});
+
+/* navbar: solid on scroll or when menu is open; active link */
+const hdr=document.getElementById('hdr'),navEl=document.getElementById('nav');
+const onScroll=()=>hdr.classList.toggle('solid',scrollY>40);
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+navEl.addEventListener('show.bs.collapse',()=>hdr.classList.add('menu'));
+navEl.addEventListener('hidden.bs.collapse',()=>hdr.classList.remove('menu'));
+const links=[...navEl.querySelectorAll('.nav-link')];
+const targets=links.map(a=>document.querySelector(a.getAttribute('href')));
+addEventListener('scroll',()=>{
+  const y=scrollY+140;let idx=0;
+  targets.forEach((t,i)=>{if(t&&t.offsetTop<=y)idx=i});
+  links.forEach((a,i)=>a.classList.toggle('active',i===idx));
+},{passive:true});
+links.forEach(a=>a.addEventListener('click',()=>{const c=bootstrap.Collapse.getInstance(navEl);if(c&&navEl.classList.contains('show'))c.hide()}));
+
+/* forms: placeholders, connect to your listings feed / form service */
+document.getElementById('searchForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  document.getElementById('searchMsg').textContent='Listing search is not connected yet. Call 206-919-6886 to see current homes.';
+});
+document.getElementById('contactForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  document.getElementById('sent').textContent='Thanks. Your message was sent.';
+  e.target.reset();
+});
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+/* cookies */
+const ck=document.getElementById('cookie');
+try{if(!localStorage.getItem('ck'))ck.hidden=false}catch{ck.hidden=false}
+document.getElementById('accept').addEventListener('click',()=>{ck.hidden=true;try{localStorage.setItem('ck','1')}catch{}});
+</script>
+</body>
+</html>
