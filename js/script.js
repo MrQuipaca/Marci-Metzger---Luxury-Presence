@@ -1,45 +1,56 @@
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav-links');
-menuToggle.addEventListener('click', () => {
-  const open = nav.classList.toggle('open');
-  menuToggle.setAttribute('aria-expanded', String(open));
-});
-nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-  nav.classList.remove('open');
-  menuToggle.setAttribute('aria-expanded', 'false');
-}));
-document.getElementById('year').textContent = new Date().getFullYear();
+/* ===== Gallery: add up to 7 images here. Extra entries are ignored. ===== */
+const PHOTOS=[
+  {src:'images/gallery/gallery-1.webp',alt:'Gallery photo 1'},
+  {src:'images/gallery/gallery-2.webp',alt:'Gallery photo 2'},
+  {src:'images/gallery/gallery-3.webp',alt:'Gallery photo 3'},
+  {src:'images/gallery/gallery-4.webp',alt:'Gallery photo 4'},
+  {src:'images/gallery/gallery-5.webp',alt:'Gallery photo 5'}
+ 
+].slice(0,5);
 
-const searchForm = document.getElementById('search-form');
-const cards = [...document.querySelectorAll('.property-card')];
-const searchMessage = document.getElementById('search-message');
-searchForm.addEventListener('submit', event => {
-  event.preventDefault();
-  const data = new FormData(searchForm);
-  const min = Number(data.get('min')) || 0;
-  const max = Number(data.get('max')) || Infinity;
-  const visible = cards.filter(card => {
-    const location = data.get('location');
-    const type = data.get('type');
-    const beds = parseInt(data.get('beds'), 10) || 0;
-    const baths = parseInt(data.get('baths'), 10) || 0;
-    return (!location || card.dataset.location === location)
-      && (!type || card.dataset.type === type)
-      && Number(card.dataset.price) >= min
-      && Number(card.dataset.price) <= max
-      && Number(card.dataset.beds) >= beds
-      && Number(card.dataset.baths) >= baths;
-  });
-  if (data.get('sort') === 'price-low') visible.sort((a,b) => +a.dataset.price - +b.dataset.price);
-  if (data.get('sort') === 'price-high') visible.sort((a,b) => +b.dataset.price - +a.dataset.price);
-  cards.forEach(card => card.hidden = !visible.includes(card));
-  const grid = document.getElementById('property-grid');
-  visible.forEach(card => grid.appendChild(card));
-  searchMessage.textContent = `${visible.length} sample ${visible.length === 1 ? 'property' : 'properties'} found. This demo does not connect to live listings.`;
+const inner=document.getElementById('galInner'),ind=document.getElementById('galInd'),car=document.getElementById('galleryCarousel');
+PHOTOS.forEach((p,i)=>{
+  const item=document.createElement('div');
+  item.className='carousel-item'+(i===0?' active':'');
+  const img=document.createElement('img');
+  img.src=p.src;img.alt=p.alt;if(i>0)img.loading='lazy';
+  item.appendChild(img);inner.appendChild(item);
+  const b=document.createElement('button');
+  b.type='button';b.setAttribute('data-bs-target','#galleryCarousel');b.setAttribute('data-bs-slide-to',i);
+  b.setAttribute('aria-label','Slide '+(i+1));if(i===0){b.className='active';b.setAttribute('aria-current','true')}
+  ind.appendChild(b);
 });
+if(PHOTOS.length<2){car.querySelectorAll('.carousel-control-prev,.carousel-control-next,.carousel-indicators').forEach(e=>e.remove())}
+new bootstrap.Carousel(car,{interval:4000,ride:'carousel',pause:'hover',wrap:true});
 
-document.getElementById('contact-form').addEventListener('submit', event => {
-  event.preventDefault();
-  document.getElementById('form-message').textContent =
-    'Thanks! This is a front-end test form, so your message has not been sent.';
+/* navbar: solid on scroll or when menu is open; active link */
+const hdr=document.getElementById('hdr'),navEl=document.getElementById('nav');
+const onScroll=()=>hdr.classList.toggle('solid',scrollY>40);
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+navEl.addEventListener('show.bs.collapse',()=>hdr.classList.add('menu'));
+navEl.addEventListener('hidden.bs.collapse',()=>hdr.classList.remove('menu'));
+const links=[...navEl.querySelectorAll('.nav-link')];
+const targets=links.map(a=>document.querySelector(a.getAttribute('href')));
+addEventListener('scroll',()=>{
+  const y=scrollY+140;let idx=0;
+  targets.forEach((t,i)=>{if(t&&t.offsetTop<=y)idx=i});
+  links.forEach((a,i)=>a.classList.toggle('active',i===idx));
+},{passive:true});
+links.forEach(a=>a.addEventListener('click',()=>{const c=bootstrap.Collapse.getInstance(navEl);if(c&&navEl.classList.contains('show'))c.hide()}));
+
+/* forms: placeholders, connect to your listings feed / form service */
+document.getElementById('searchForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  document.getElementById('searchMsg').textContent='Listing search is not connected yet. Call 206-919-6886 to see current homes.';
 });
+document.getElementById('contactForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  document.getElementById('sent').textContent='Thanks. Your message was sent.';
+  e.target.reset();
+});
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+/* cookies */
+const ck=document.getElementById('cookie');
+try{if(!localStorage.getItem('ck'))ck.hidden=false}catch{ck.hidden=false}
+document.getElementById('accept').addEventListener('click',()=>{ck.hidden=true;try{localStorage.setItem('ck','1')}catch{}});
